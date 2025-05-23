@@ -1,0 +1,21 @@
+POST http://localhost:4004/sales/predictSales
+Content-Type: application/json
+
+{
+    "Item_Identifier": "ASGHQ",
+    "Item_Weight": 15.92,
+    "Item_Fat_Content": "Low Fat",
+    "Item_Visibility": 0.019278,
+    "Item_Type": "Dairy",
+    "Item_MRP": 118.250,
+    "Outlet_Identifier": "OUT018",
+    "Outlet_Establishment_Year": 2000,
+    "Outlet_Size": "Medium",
+    "Outlet_Location_Type": "Tier 3",
+    "Outlet_Type": "Supermarket Type2"
+}
+
+
+### Request to read all SalesData after prediction (to verify storage)
+GET http://localhost:4004/sales/SalesData
+Accept: application/json
