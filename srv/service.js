@@ -1,4 +1,3 @@
-
 const cds = require('@sap/cds');
 const axios = require('axios'); // For making HTTP requests to the Flask app
 
@@ -27,17 +26,18 @@ module.exports = async (srv) => {
             // that your Flask ML model expects.
             const flaskPayload = {
                 Item_Identifier: inputData.Item_Identifier,
-                Item_Weight: inputData.Item_Weight,
+                Item_Weight: parseFloat(inputData.Item_Weight),
                 Item_Fat_Content: inputData.Item_Fat_Content,
-                Item_Visibility: inputData.Item_Visibility,
+                Item_Visibility: parseFloat(inputData.Item_Visibility),
                 Item_Type: inputData.Item_Type,
-                Item_MRP: inputData.Item_MRP,
+                Item_MRP: parseFloat(inputData.Item_MRP),
                 Outlet_Identifier: inputData.Outlet_Identifier,
-                Outlet_Establishment_Year: inputData.Outlet_Establishment_Year,
+                Outlet_Establishment_Year: parseInt(inputData.Outlet_Establishment_Year),
                 Outlet_Size: inputData.Outlet_Size,
                 Outlet_Location_Type: inputData.Outlet_Location_Type,
                 Outlet_Type: inputData.Outlet_Type
             };
+            
 
             // 2. Call the Flask Machine Learning Model
             console.log("Sending prediction request to Flask:", flaskPayload);
@@ -132,3 +132,10 @@ module.exports = async (srv) => {
     });
     */
 };
+
+
+
+
+
+
+

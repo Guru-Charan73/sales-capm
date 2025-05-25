@@ -12,5 +12,5 @@ entity SalesData {
     Outlet_Size                 : String;
     Outlet_Location_Type        : String;
     Outlet_Type                 : String;
-    Item_Outlet_Sales            : Decimal; // This field will be populated from the Flask model
+    Predicted_sales            : Decimal; // This field will be populated from the Flask model
 }
