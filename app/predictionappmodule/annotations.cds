@@ -22,6 +22,8 @@
 
 using { SalesService } from '../../srv/service';
 
+
+
 annotate SalesService.SalesData with
 
   @UI.SelectionFields: [
