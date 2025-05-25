@@ -23,6 +23,7 @@
 using { SalesService } from '../../srv/service';
 
 annotate SalesService.SalesData with
+
   @UI.SelectionFields: [
     Item_Identifier,
     Outlet_Identifier,
