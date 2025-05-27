@@ -13,7 +13,7 @@ annotate SalesService.SalesData with
     { $Type: 'UI.DataField', Value: Outlet_Identifier, Label:'OutletID'},
     { $Type: 'UI.DataField', Value: Outlet_Establishment_Year,CriticalityRepresentation:#WithIcon, Label:'Year'},
     { $Type: 'UI.DataField', Value: Predicted_sales, Label:'PredictedSales'},
-    { $Type: 'UI.DataFieldForAction', Action:'SalesService.EntityContainer/predictSales', Label:'Create' }
+    { $Type: 'UI.DataFieldForAction', Action:'SalesService.EntityContainer/predictSales', Label:'PredictSales' }
   ]
   @Capabilities.InsertRestrictions.Insertable: false; 
 
