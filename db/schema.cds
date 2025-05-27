@@ -1,6 +1,6 @@
 namespace my.sales;
 
-using {cuid,managed } from '@sap/cds/common';
+using {cuid} from '@sap/cds/common';
 
 entity SalesData :cuid{
     Item_Identifier         : String;
