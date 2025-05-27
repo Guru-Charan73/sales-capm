@@ -1,7 +1,9 @@
 namespace my.sales;
 
-entity SalesData {
-    key Item_Identifier         : String;
+using {cuid,managed } from '@sap/cds/common';
+
+entity SalesData :cuid{
+    Item_Identifier         : String;
     Item_Weight                 : Decimal;
     Item_Fat_Content            : String;
     Item_Visibility             : Decimal;
